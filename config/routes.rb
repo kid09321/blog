@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     resources :blogs do
-      collections do
+      collection do
         get :about
       end
     end
