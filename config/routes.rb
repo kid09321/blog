@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'blogs#index'
+  resources :blogs
+  devise_scope :user do
+    get '/admin/sign_up' => 'devise/registrations#new'
+  end
+  namespace :admin do
+    resources :blogs do
+      collections do
+        get :about
+      end
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
