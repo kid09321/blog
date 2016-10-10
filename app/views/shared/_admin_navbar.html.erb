@@ -1,6 +1,6 @@
 <div id="brand">
   <h1>
-    <a href="/">後台</a>
+    <a href="/admin">後台</a>
   </h1>
 </div>
 <div id="navigation">
@@ -21,4 +21,5 @@
 <% else %>
 <%= link_to("登出", destroy_user_session_path, method: :delete) %>
 <% end %>
+<%= link_to("回前台", blogs_path) %>
 </div>

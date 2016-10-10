@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => 'ckeditor'
   devise_for :users
   root 'blogs#index'
+  get '/index' => 'blogs#index'
   resources :blogs
   resources :articles
   devise_scope :user do
