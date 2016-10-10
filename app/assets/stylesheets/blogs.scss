@@ -4,9 +4,10 @@
 
 .body{
   text-decoration: none;
-}
-a {
+  }
+a,ul {
   text-decoration: none !important;
+  list-style: none;
 }
 #brand h1 {
   margin: 17px 0 0 0 !important;
@@ -103,4 +104,19 @@ a {
         margin-top: 80px;
         padding: 0px;
     }
+}
+.instagram{
+  width:100%;
+  position: relative;
+}
+.instagram-item{
+  float:left;
+  width:10%;
+}
+.instagram-list{
+  padding:0px;
+}
+.footer {
+  background-color: #ddd;
+  height:350px;
 }
