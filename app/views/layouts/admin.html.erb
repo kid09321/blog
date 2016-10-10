@@ -4,20 +4,29 @@
   <title>NewBlog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
   <%= csrf_meta_tags %>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 <body>
-<div class="row">
-  <div class="col-md-2">
-    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-      <li> <%= link_to("使用者列表", admin_users_path) %></li>
-      <li> <%= link_to("文章列表") %></li>
-    </ul>
+  <div class="header">
+    <div class="header-inner">
+      <%= render 'shared/admin_navbar' %>
+    </div>
   </div>
-  <div class="col-md-10">
-    <%= yield %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li> <%= link_to("使用者列表", admin_users_path) %></li>
+          <li> <%= link_to("文章列表", admin_articles_path) %></li>
+          <li> <%= link_to("新增文章", new_admin_article_path) %></li>
+        </ul>
+      </div>
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+    </div>
   </div>
-</div>
 </body>
 </html>

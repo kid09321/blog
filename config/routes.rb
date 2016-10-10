@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => 'ckeditor'
   devise_for :users
   root 'blogs#index'
   resources :blogs
+  resources :articles
   devise_scope :user do
     get '/admin/sign_up' => 'devise/registrations#new'
   end
   namespace :admin do
+    root 'blogs#index'
     resources :blogs do
       collection do
         get :about
       end
     end
     resources :users
+    resources :articles
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

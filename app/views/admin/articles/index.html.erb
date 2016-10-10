@@ -1,0 +1,30 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>
+        文章標題
+      </td>
+      <td>
+        發文者
+      </td>
+      <td>
+        發文日期
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @articles.each do |article| %>
+    <tr>
+      <td>
+        <%= link_to(article.title, edit_admin_article_path(article)) %>
+      </td>
+      <td>
+        <%= article.user.username %>
+      </td>
+      <td>
+        <%= article.created_at.strftime("%Y-%m-%d") %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

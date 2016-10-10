@@ -1,0 +1,9 @@
+<h1><%= @article.title %></h1>(修改)
+<br />
+<%= form_for [:admin,@article] do |f| %>
+  <%= f.label :title, '文章標題' %>
+  <%= f.text_field :title %>
+  <%= f.cktext_area :content, id: 'sometext' %>
+  <!-- <%= cktext_area :page, :info, cols: 40, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %> -->
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>
