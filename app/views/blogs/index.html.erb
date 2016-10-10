@@ -1,17 +1,14 @@
-<div class="header">
-  <div class="header-inner">
-    <%= render 'shared/navbar' %>
-  </div>
-</div>
 <div class="container">
   <div class="articles">
     <% @articles.each do |article| %>
-      <div class="title">
+      <div class="image">
+        <%= article.first_image.try(:html_safe) %>
+      </div>
+      <div class="title" style="text-align:center; font-style:italic;">
         <%= article.title%>
       </div>
-      <div class="content">
-        <%= article.content.html_safe %>
-      </div>
+      <br />
+      <div class="show-article"><a href="<%= blog_path(article) %>">continue reading</a></div>
       <hr>
     <% end %>
   </div>

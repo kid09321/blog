@@ -1,0 +1,7 @@
+<div class="wrap">
+  <div class="container">
+    <div class="articles">
+      <%= @article.content.try(:html_safe) %>
+    </div>
+  </div>
+</div>

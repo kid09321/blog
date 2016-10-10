@@ -8,8 +8,13 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 <body>
+<div class="header">
+  <div class="header-inner">
+    <%= render 'shared/navbar' %>
+  </div>
+</div>
 <div style="margin-top:80px;min-height:300px">
-<%= yield %>
+  <%= yield %>
 </div>
 <%= render 'shared/footer', posts: @posts %>
 </body>
