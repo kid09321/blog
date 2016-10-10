@@ -3,7 +3,18 @@
     <%= render 'shared/navbar' %>
   </div>
 </div>
-<div>
+<div class="container">
+  <div class="articles">
+    <% @articles.each do |article| %>
+      <div class="title">
+        <%= article.title%>
+      </div>
+      <div class="content">
+        <%= article.content.html_safe %>
+      </div>
+      <hr>
+    <% end %>
+  </div>
 </div>
 <script>
   // 滾動捲軸會讓header縮小
