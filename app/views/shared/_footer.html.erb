@@ -1,9 +1,18 @@
+<% if posts %>
 <div class="footer">
   <div class="widget">
     <ul class="instagram-list">
       <% posts.each do |post| %>
       <li class="instagram-item">
-        <a href="<%= post['link'] %>" target="_blank">
+        <a class="insta-link"href="<%= post['link'] %>" target="_blank" style="background-color:black">
+          <div class="insta-detail">
+            <p>
+              <i class="fa fa-heart insta-like" aria-hidden="true"></i>
+              <span class="likes"><%= post['likes']['count'] %></span>
+              <i class="fa fa-comment insta-comment" aria-hidden="true"></i>
+              <span class="comments"><%= post['comments']['count'] %></span>
+            </p>
+          </div>
           <img src="<%= post['images']['thumbnail']['url'] %>" style="opacity:1;">
         </a>
       </li>
@@ -13,4 +22,15 @@
     </div>
   </div>
 </div>
+<% end %>
+<script>
+$('.insta-link').hover(function(){
+  $(this).find($('.insta-detail')).css("opacity", 1);
+  $(this).find($('img')).css("opacity",0.6);
+})
+$('.insta-link').mouseleave(function(){
+  $(this).find($('.insta-detail')).css("opacity", 0);
+  $(this).find($('img')).css("opacity",1);
+})
+</script>
 
