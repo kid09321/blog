@@ -1,0 +1,16 @@
+<div class="footer">
+  <div class="widget">
+    <ul class="instagram-list">
+      <% posts.each do |post| %>
+      <li class="instagram-item">
+        <a href="<%= post['link'] %>" target="_blank">
+          <img src="<%= post['images']['thumbnail']['url'] %>" style="opacity:1;">
+        </a>
+      </li>
+      <% end %>
+    </ul>
+    <div class="clearfix">
+    </div>
+  </div>
+</div>
+
