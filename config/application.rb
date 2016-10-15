@@ -25,6 +25,6 @@ module NewBlog
     config.assets.precompile += %w( search.js ckeditor/config.js)
     config.assets.precompile += Ckeditor.assets
     config.assets.precompile += %w( ckeditor/* )
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor #{config.root}/app/services)
+    config.autoload_paths += %W(#{config.root}/app/models #{config.root}/app/models/ckeditor #{config.root}/app/services  #{config.root}/lib)
   end
 end

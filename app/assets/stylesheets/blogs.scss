@@ -31,7 +31,7 @@ a,ul {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   margin:0px;
-  z-index: 999;
+  z-index: 9999999;
 }
 
 .shrink,.shrink .header-inner,.shrink .header-inner #brand h1,.shrink #navigation ul li,.shrink #social ul li, .shrink #login, .shrink #login a{
@@ -169,4 +169,10 @@ span.comments{
 .insta-detail p{
   padding-left: 25%;
   color: #fff;
+}
+.bx-wrapper{
+  width:950px;
+}
+.bx-wrapper ul li {
+height: 570px;
 }

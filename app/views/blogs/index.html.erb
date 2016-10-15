@@ -1,4 +1,11 @@
 <div class="container">
+  <ul class="bxslider">
+    <li><img src="/assets/slider-1.jpg" width="950" height="570"/></li>
+    <li><img src="/assets/slider-2.jpg" width="950" height="570"/></li>
+    <li><img src="/assets/slider-3.jpg" width="950" height="570"/></li>
+  </ul>
+</div>
+<div class="container">
   <div class="articles">
     <% @articles.each do |article| %>
       <div class="image">
@@ -19,12 +26,17 @@
     if
       ($(document).scrollTop() > 100){
       $(".header").addClass("shrink");
-      updateSliderMargin();
     }
     else
     {
       $(".header").removeClass("shrink");
-      updateSliderMargin();
     }
+  });
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      auto: true,
+      autoControllers: true,
+      slideWidth: 950
+    });
   });
 </script>
