@@ -7,8 +7,4 @@ class Admin::BlogsController < ApplicationController
   end
 
   private
-
-  def set_s3_bucket
-    @s3_post = S3_BUCKET.presigned_post(key: "sliders/#{SecureRandom.uuid}/${filename}", success_action_status: '201',acl:'public-read')
-  end
 end
