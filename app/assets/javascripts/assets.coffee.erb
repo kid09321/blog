@@ -1,6 +1,6 @@
 $(document).ready ->
-  console.log(App.bucket)
   $(".file").each ->
+    self = $(this)
     console.log($(this)[0])
     new qq.FileUploader
       multiple: false
@@ -31,3 +31,9 @@ $(document).ready ->
         if responseJSON['storage_full']
         else if responseJSON['fail']
         else
+        $('.qq-upload-failed-text').text('');
+        file_name = self.attr('name').split("/")[1].split(".")[0]
+        d = new Date()
+        img =  $("."+file_name)
+        img.removeAttr('src').attr('src','/uploads/sliders/'+file_name+'.jpg?'+d.getTime());
+

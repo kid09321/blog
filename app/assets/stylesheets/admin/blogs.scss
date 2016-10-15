@@ -1,3 +1,20 @@
 // Place all the styles related to the Admin::Blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.qq-upload-button{
+  width:100px;
+  height:40px;
+  border: 1px solid #E6E6E6 !important;
+  line-height: 1.8px !important;
+}
+.slider-pic, .slider-pic .col-md-2 {
+  height:180px
+}
+.row {
+  margin-bottom: 30px;
+}
+
+.wrap {
+  margin-top:20px;
+}

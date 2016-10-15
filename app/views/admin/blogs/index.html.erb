@@ -1,13 +1,41 @@
 <div style="height:3000px;">
-<div class="file" name="sliders/slider-1.jpg">
-  <input type="file" id="slider_1_image" name="sliders/slider-1.jpg" />
-</div>
-<div class="file" name="sliders/slider-2.jpg">
-  <input type="file" id="slider_2_image" name="sliders/slider-2.jpg" />
-</div>
-<div class="file" name="sliders/slider-3.jpg">
-  <input type="file" id="slider_2_image" name="sliders/slider-3.jpg" />
-</div>
+<h1>首頁輪播圖片設定</h1>
+  <div class="row silder-pic">
+    <div class="col-md-2">
+      <div class="file" name="sliders/slider-1.jpg">
+        <input class="slider_upload_btn" type="file" id="slider_1_image" name="sliders/slider-1.jpg" />
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="current_picture">
+        目前圖片: <img class="slider-1" src="/uploads/sliders/slider-1.jpg" width="300" height="180">
+      </div>
+    </div>
+  </div>
+  <div class="row slider-pic">
+    <div class="col-md-2">
+      <div class="file" name="sliders/slider-2.jpg">
+        <input class="slider_upload_btn" type="file" id="slider_2_image" name="sliders/slider-2.jpg" />
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="current_picture">
+        目前圖片: <img class="slider-2" src="/uploads/sliders/slider-2.jpg" width="300" height="180">
+      </div>
+    </div>
+  </div>
+  <div class="row slider-pic">
+    <div class="col-md-2">
+      <div class="file" name="sliders/slider-3.jpg">
+        <input class="slider_upload_btn" type="file" id="slider_2_image" name="sliders/slider-3.jpg" />
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="current_picture">
+        目前圖片: <img class="slider-3" src="/uploads/sliders/slider-3.jpg" width="300" height="180">
+      </div>
+    </div>
+  </div>
 </div>
 <script>
   // 滾動捲軸會讓header縮小
