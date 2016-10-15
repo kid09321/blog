@@ -17,7 +17,7 @@ class Asset
   def self.create(file_path,file = nil)
     # file_path = safe(file_path)
     file_dir,file_name = file_path.split('/',2) # ex:'assets/img.jpg'
-    path = File.join(Rails.root,'app', file_dir, file_name)
+    path = File.join(Rails.root, file_dir, file_name)
     if file
       Rails.logger.info("==========#{path}")
       File.open(path,'wb'){ |f| f.write(file) }

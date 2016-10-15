@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk', '~> 2.6', '>= 2.6.9'
 gem "mini_magick"
 gem 'dragonfly'
 gem 'ckeditor'

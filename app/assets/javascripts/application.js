@@ -22,3 +22,6 @@
 //= require bxslider/jquery.bxslider
 //= require bxslider/jquery.bxslider.min.js
 //= require fileuploader
+
+window.App ={}
+

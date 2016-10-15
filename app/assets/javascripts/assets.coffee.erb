@@ -1,4 +1,5 @@
 $(document).ready ->
+  console.log(App.bucket)
   $(".file").each ->
     console.log($(this)[0])
     new qq.FileUploader
@@ -22,7 +23,7 @@ $(document).ready ->
         $(document).mousemove window.moveIndicator
         csrf_token = $('meta[name=csrf-token]').attr('content')
         csrf_param = $('meta[name=csrf-param]').attr('content')
-        this.params = key: "assets/#{name}", name: name
+        this.params = key: "public/uploads/#{name}", name: name
         this.params[csrf_param] = csrf_token
       onComplete: (id, file_name, responseJSON)->
         $('#indicator').hide()
