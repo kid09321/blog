@@ -1,5 +1,6 @@
 class Admin::AssetsController < ApplicationController
   before_action :authenticate_user!
+  before_action :admin?
   def upload
     qqfile = QqFile.new(params[:qqfile],request)
     image = qqfile.body
@@ -8,5 +9,9 @@ class Admin::AssetsController < ApplicationController
   end
 
   private
+
+  def admin?
+    current_user.admin
+  end
 
 end
