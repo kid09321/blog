@@ -29,4 +29,8 @@ class Admin::ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :content)
   end
+
+  def admin?
+    current_user.admin
+  end
 end
