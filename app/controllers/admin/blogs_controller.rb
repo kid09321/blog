@@ -9,6 +9,8 @@ class Admin::BlogsController < ApplicationController
   private
 
   def admin?
-    current_user.admin
+    if !current_user.admin
+      redirect_to blogs_path
+    end
   end
 end
