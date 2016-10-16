@@ -16,6 +16,6 @@
 !/log/.keep
 /tmp
 /config/s3.yml
-/config/secret.yml
+/config/secrets.yml
 /config/database.yml
 /public/uploads/*
