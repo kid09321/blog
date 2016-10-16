@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'therubyracer', platforms: :ruby
 gem 'aws-sdk', '~> 2.6', '>= 2.6.9'
 gem "mini_magick"
 gem 'dragonfly'
@@ -48,7 +49,6 @@ group :development, :test do
   gem 'spring'
 end
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem "mysql2"
 end
 
