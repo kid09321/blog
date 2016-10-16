@@ -1,5 +1,6 @@
 class Admin::ArticlesController < ApplicationController
   before_action :authenticate_user!
+  before_action :admin?
   layout 'admin'
   def new
     @article = current_user.articles.build
@@ -31,6 +32,8 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def admin?
-    current_user.admin
+    if !current_user.admin
+      redirect_to blogs_path
+    end
   end
 end
