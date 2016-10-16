@@ -16,4 +16,5 @@
 !/log/.keep
 /tmp
 /config/s3.yml
-
+/config/secret.yml
+/config/database.yml
