@@ -40,10 +40,11 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 # append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
 # git clone 完成後會從 shared 資料夾 copy 過去的資料夾
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads/sliders', 'public/uploads/ckeditor')
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+set :shared_paths, fetch(:shared_paths,[]).push('public_uploads')
