@@ -18,6 +18,9 @@ class Asset
     # file_path = safe(file_path)
     file_dir,file_name = file_path.split('/',2) # ex:'assets/img.jpg'
     path = File.join(Rails.root, file_dir, file_name)
+    if Rails.env.production?
+      path  = File.join('/home/sen/blog/current', file_dir, file_name)
+    end
     if file
       Rails.logger.info("==========#{path}")
       File.open(path,'wb'){ |f| f.write(file) }
