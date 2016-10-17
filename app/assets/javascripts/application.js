@@ -24,4 +24,23 @@
 //= require fileuploader
 
 window.App ={}
+var sliderLink;
+$(document).ready(function(){
+  $('.slider-link-btn').click(function(){
+    sliderLink = $(this).siblings();
+    console.log(sliderLink);
+    title = sliderLink[1].value;
+    url = sliderLink[2].value;
+    type = sliderLink[3].value;
+    console.log(title);
+    console.log(url);
+    console.log(type);
+    $.ajax({
+      type: 'POST',
+      url: '/admin/assets/slider_link',
+      data: {"link": {"title": title, "url": url, "link_type":type} }
+    });
+  });
+});
+
 

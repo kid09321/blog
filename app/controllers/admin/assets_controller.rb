@@ -8,12 +8,26 @@ class Admin::AssetsController < ApplicationController
     render text: asset.to_json
   end
 
+  def slider_link
+    if @link = Link.where(link_type: link_params[:link_type]).first
+      @link.update(link_params)
+    else
+      @link = Link.new(link_params)
+      @link.save
+    end
+    render :nothing => true
+  end
+
   private
 
   def admin?
     if !current_user.admin
       redirect_to blogs_path
     end
+  end
+
+  def link_params
+    params.require(:link).permit(:title, :link_type, :url)
   end
 
 end

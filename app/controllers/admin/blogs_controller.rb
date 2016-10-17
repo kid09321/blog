@@ -4,6 +4,9 @@ class Admin::BlogsController < ApplicationController
   layout 'admin'
 
   def index
+    @slider_link_1 = Link.where(link_type: 'slider-1').first
+    @slider_link_2 = Link.where(link_type: 'slider-2').first
+    @slider_link_3 = Link.where(link_type: 'slider-3').first
   end
 
   private
