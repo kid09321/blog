@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 # 你的 application name
-set :application, 'zhezheblog'
+set :application, 'blog'
 
 
 # 你的 git url
