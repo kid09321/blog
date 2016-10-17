@@ -33,6 +33,11 @@ a,ul {
   margin:0px;
   z-index: 9999999;
 }
+@media only screen and (max-width: 969px) {
+  .header-inner{
+    width: 100%;
+  }
+}
 
 .shrink,.shrink .header-inner,.shrink .header-inner #brand h1,.shrink #navigation ul li,.shrink #social ul li, .shrink #login, .shrink #login a{
   height: 50px;
@@ -171,8 +176,17 @@ span.comments{
   color: #fff;
 }
 .bx-wrapper{
-  width:950px;
+  width:1000px;
 }
-.bx-wrapper ul li {
-height: 570px;
+@media only screen and (min-width:1200px){
+  .bx-wrapper{
+    width:1000px;
+  }
+  .bx-wrapper ul li {
+    height: 397px;
+  }
+  .bx-wrapper ul li img{
+    width: 100%;
+    height: auto;
+  }
 }
