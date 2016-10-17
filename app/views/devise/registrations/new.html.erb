@@ -1,4 +1,6 @@
-<% if current_user %>
+<% if !current_user %>
+  <% redirect_to blogs_path %>
+<% else %>
   <h2>Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
