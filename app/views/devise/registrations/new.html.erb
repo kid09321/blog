@@ -1,5 +1,7 @@
 <% if !current_user %>
-  <% redirect_to blogs_path %>
+  <script type="text/javascript">
+    window.location.href="/"
+  </script>
 <% else %>
   <h2>Sign up</h2>
 
