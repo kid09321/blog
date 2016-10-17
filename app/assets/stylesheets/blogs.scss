@@ -181,7 +181,9 @@ span.comments{
 @media only screen and (min-width:1200px){
   .bx-wrapper{
     height:379px;
-    border:none;
+  }
+  .bx-viewport {
+    border:none !important;
   }
   .bx-wrapper{
     width:1000px;
