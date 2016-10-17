@@ -7,7 +7,9 @@ class BlogsController < ApplicationController
     @posts = JSON.parse(@instagram_posts)['data']
 
     @articles = Article.all
-
+    @slider_link_1 = Link.where(link_type: 'slider-1').first
+    @slider_link_2 = Link.where(link_type: 'slider-2').first
+    @slider_link_3 = Link.where(link_type: 'slider-3').first
   end
 
   def show

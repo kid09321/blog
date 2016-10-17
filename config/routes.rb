@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :assets do
       collection do
         post :upload
+        post :slider_link
       end
     end
   end

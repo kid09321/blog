@@ -1,8 +1,20 @@
 <div class="container">
   <ul class="bxslider">
-    <li><img src="/uploads/sliders/slider-1.jpg" width="950" height="570"/></li>
-    <li><img src="/uploads/sliders/slider-2.jpg" width="950" height="570"/></li>
-    <li><img src="/uploads/sliders/slider-3.jpg" width="950" height="570"/></li>
+    <a href="<%= @slider_link_1.try(:url) %>">
+      <li>
+        <img src="/uploads/sliders/slider-1.jpg" width="950" height="570" data-url="<%= @slider_link_1.try(:url) %>"/>
+      </li>
+    </a>
+    <a href="<%= @slider_link_2.try(:url) %>">
+      <li>
+        <img src="/uploads/sliders/slider-2.jpg" width="950" height="570" data-url="<%= @slider_link_2.try(:url) %>"/>
+      </li>
+    </a>
+    <a href="<%= @slider_link_3.try(:url) %>">
+      <li>
+        <img src="/uploads/sliders/slider-3.jpg" width="950" height="570"data-url="<%= @slider_link_3.try(:url) %>"/>
+      </li>
+    </a>
   </ul>
 </div>
 <div class="container">
@@ -36,7 +48,9 @@
     $('.bxslider').bxSlider({
       auto: true,
       autoControllers: true,
-      slideWidth: 950
+      slideWidth: 950,
+      captions: true,
+      hyperlinks:true
     });
   });
 </script>
