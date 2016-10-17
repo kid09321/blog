@@ -18,5 +18,4 @@
 /config/s3.yml
 /config/secrets.yml
 /config/database.yml
-/public/uploads/sliders/*
-/public/uploads/ckeditor/*
+
