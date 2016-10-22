@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'fog'
+gem 'carrierwave'
 gem 'therubyracer', platforms: :ruby
 gem 'aws-sdk', '~> 2.6', '>= 2.6.9'
 gem "mini_magick"
