@@ -16,6 +16,16 @@ class Admin::CategoriesController < ApplicationController
   def show
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    @category.articles.each do |article|
+      article.category = nil
+      article.save
+    end
+    @category.destroy
+    redirect_to admin_categories_path
+  end
+
   private
 
   def category_params

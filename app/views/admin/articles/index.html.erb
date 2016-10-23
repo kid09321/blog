@@ -10,6 +10,9 @@
       <td>
         發文日期
       </td>
+      <td>
+        刪除
+      </td>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +26,9 @@
       </td>
       <td>
         <%= article.created_at.strftime("%Y-%m-%d") %>
+      </td>
+      <td>
+        <%= link_to('刪除',admin_article_path(article),method: :delete, data:{confirm:'確定刪除文章?'}) %>
       </td>
     </tr>
   <% end %>
