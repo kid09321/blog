@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   belongs_to :user
+  belongs_to :category
 
   def first_image
     html = Nokogiri::HTML.fragment(self.content)

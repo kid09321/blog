@@ -3,6 +3,16 @@
 <%= form_for [:admin,@article] do |f| %>
   <%= f.label :title, '文章標題' %>
   <%= f.text_field :title %>
+  <%= f.label :category_id, '文章分類' %>
+  <select name="article[category_id]"id="categories">
+  <% @categories.each do |category| %>
+    <% if @article.category_id ==  category.id %>
+      <option value="<%= category.id %>" selected="selected" ><%= category.title %></option>
+    <% else %>
+      <option value="<%= category.id %>"><%= category.title %></option>
+    <% end %>
+  <% end %>
+  </select>
   <%= f.cktext_area :content, id: 'sometext' %>
   <!-- <%= cktext_area :page, :info, cols: 40, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %> -->
   <%= f.submit "Submit", :disable_with => 'Submiting...' %>
