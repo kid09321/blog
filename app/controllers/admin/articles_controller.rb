@@ -33,6 +33,12 @@ class Admin::ArticlesController < ApplicationController
     render 'admin/articles/categories'
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to admin_articles_path
+  end
+
   private
 
   def article_params

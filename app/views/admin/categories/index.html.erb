@@ -17,6 +17,9 @@
       <td>
         最新文章發布時間
       </td>
+      <td>
+        刪除
+      </td>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +33,9 @@
       </td>
       <td>
         <%= category.latest_article %>
+      </td>
+      <td>
+        <%= link_to("刪除", admin_category_path(category), method: :delete, data:{confirm: '確定刪除此分類?'}) %>
       </td>
     </tr>
   <% end %>
