@@ -3,6 +3,7 @@ class Admin::ArticlesController < ApplicationController
   before_action :admin?
   layout 'admin'
   def new
+    @categories = Category.all
     @article = current_user.articles.build
   end
 
@@ -17,6 +18,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
     @article = Article.find(params[:id])
   end
 
@@ -25,10 +27,16 @@ class Admin::ArticlesController < ApplicationController
     @article.update(article_params)
     redirect_to '/admin/articles'
   end
+
+  def categories
+    @categories = Category.all
+    render 'admin/articles/categories'
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:title, :content)
+    params.require(:article).permit(:title, :content, :category_id)
   end
 
   def admin?

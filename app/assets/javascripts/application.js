@@ -25,21 +25,48 @@
 window.App ={}
 var sliderLink;
 $(document).ready(function(){
+  // 新增文章分類的post
   $('.slider-link-btn').click(function(){
     sliderLink = $(this).siblings();
-    console.log(sliderLink);
     title = sliderLink[1].value;
     url = sliderLink[2].value;
     type = sliderLink[3].value;
-    console.log(title);
-    console.log(url);
-    console.log(type);
     $.ajax({
       type: 'POST',
       url: '/admin/assets/slider_link',
       data: {"link": {"title": title, "url": url, "link_type":type} }
     });
   });
+  // 新增文章分類的post
+  $('#new-category').click(function(){
+    $('#new-category-form').show();
+    $('#cancel').show();
+    $('#new-category').hide();
+    // title = $('input[name="category[title]"').val();
+    // $('#submit').click(function(){
+    //   $.ajax({
+    //     type: 'POST',
+    //     url: $(this).parent().attr('action'),
+    //     data: {"category": {"title": title}},
+    //   }).done(function(){
+    //     $.ajax({
+    //       type: 'GET',
+    //       url: '/admin/articles/categories',
+    //       data: {},
+    //     }).done(function(categories){
+    //       categories_count = Object.keys(categories).length
+    //       for(i = 0, i < categories_count,i++){
+    //         categories["title"]
+    //       }
+    //     })
+    //   })
+    // })
+  })
+  $('#cancel').click(function(){
+    $('#new-category-form').hide();
+    $('#cancel').hide();
+    $('#new-category').show();
+  })
 });
 
 

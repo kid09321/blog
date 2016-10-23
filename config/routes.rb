@@ -16,13 +16,18 @@ Rails.application.routes.draw do
       end
     end
     resources :users
-    resources :articles
+    resources :articles do
+      collection do
+        get :categories
+      end
+    end
     resources :assets do
       collection do
         post :upload
         post :slider_link
       end
     end
+    resources :categories
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
