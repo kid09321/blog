@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
+  devise_for :users, :controllers => {:sessions => "sessions/sessions"}
   root 'blogs#index'
   get '/index' => 'blogs#index'
   resources :blogs
