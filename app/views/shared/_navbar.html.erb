@@ -5,22 +5,21 @@
 </div>
 <div id="navigation">
   <ul>
-    <li>Fashion</li>
-    <li>Shopping</li>
-    <li>Personal</li>
-    <li>Others</li>
+    <% @categories.try(:each) do |category| %>
+      <li><%= category.title %></li>
+    <% end %>
     <li>About</li>
   </ul>
 </div>
 <div id="social">
   <ul>
     <li>
-      <a href="https://www.facebook.com/zhezheisme/">
+      <a href="https://www.facebook.com/zhezheisme/" target="_blank">
         <img src="http://i.imgur.com/rJIGpgt.jpg">
       </a>
     </li>
     <li>
-      <a href="http://www.facebook.com">
+      <a href="http://www.facebook.com" target="_blank">
         <img src="http://i.imgur.com/iVK5jP9.jpg">
       </a>
     </li>
