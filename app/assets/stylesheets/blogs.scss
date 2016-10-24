@@ -10,14 +10,15 @@ a,ul {
   list-style: none;
 }
 #brand h1 {
-  margin: 17px 0 0 0 !important;
+  margin: 20px 0 0 0 !important;
   height: 80px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
 }
 #brand a {
-  font-family: 'proxima-nova';
-  color: #838383;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #3E3A39;
   letter-spacing: 0.11em;
 }
 .header {
@@ -53,40 +54,42 @@ a,ul {
 
 #brand {
   float:left;
-  width: 177px;
+  width: 100px;
 }
 #navigation{
   float:left;
-  width: 400px;
+  width: 510px;
 }
 
 #social{
   float: left;
-  width: 170px;
+  width: 130px;
 }
 
 #navigation ul, #social ul{
   float:left;
   list-style: none;
-  font-size: 16px;
-  font-family: 'proxima-nova';
+  font-size: 14px;
   height: 80px;
-  letter-spacing: 0.33em;
+  letter-spacing: 0.11em;
+  padding-left:20px;
 }
 
 #navigation ul li, #social ul li{
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
   float:left;
   height: 80px;
   line-height: 80px;
   margin: 0px 10px;
   text-transform: uppercase;
-  color: #838383;
+  color: #3E3A39;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
 }
 
 #social ul li i{
-  color: #838383;
+  color: #3E3A39;
 }
 
 #login {
@@ -99,14 +102,13 @@ a,ul {
   line-height: 80px;
   margin: 0px 10px;
   text-transform: uppercase;
-  color: #838383;
+  color: #3E3A39;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
 }
 @media (min-width: 1200px) {
     .container{
         max-width: 950px;
-        margin-top: 80px;
         padding: 0px;
     }
 }
@@ -199,5 +201,13 @@ span.comments{
   .bx-wrapper ul li img{
     width: 100%;
     height: auto;
+  }
+  .logo-wrapper{
+    position:relative;
+    min-height:140px;
+  }
+  .logo {
+    position:absolute;
+    left:405px;
   }
 }
