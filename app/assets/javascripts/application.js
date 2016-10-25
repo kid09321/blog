@@ -66,7 +66,7 @@ $(document).ready(function(){
     $('#new-category-form').hide();
     $('#cancel').hide();
     $('#new-category').show();
-  })
+  });
 });
 
 
