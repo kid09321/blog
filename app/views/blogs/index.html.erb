@@ -20,15 +20,24 @@
 <div class="container">
   <div class="articles">
     <% @articles.each do |article| %>
-      <div class="image">
-        <%= article.first_image.try(:html_safe) %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image">
+          <a href="<%= blog_path(article) %>">
+            <img src="<%= article.first_image_link %>" width="477" height="236"/>
+          </a>
+        </div>
       </div>
-      <div class="title" style="text-align:center; font-style:italic;">
-        <%= article.title%>
+      <div class="col-md-6 brief">
+        <div class="title">
+          <%= article.title%>
+        </div>
+        <div class="show-article">
+          <%= truncate(article.only_words, length: 60) %>
+        </div>
       </div>
-      <br />
-      <div class="show-article"><a href="<%= blog_path(article) %>">continue reading</a></div>
       <hr>
+    </div>
     <% end %>
   </div>
 </div>
