@@ -8,6 +8,30 @@
 a,ul {
   text-decoration: none !important;
   list-style: none;
+  color: inherit !important;
+}
+::-webkit-input-placeholder {
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
+  color: #3E3A39;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
+  color: #3E3A39;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
+  color: #3E3A39;
+}
+
+:-ms-input-placeholder {
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
+  color: #3E3A39;
 }
 #brand h1 {
   margin: 20px 0 0 0 !important;
@@ -63,7 +87,7 @@ a,ul {
 
 #social{
   float: left;
-  width: 130px;
+  width: 300px;
 }
 
 #navigation ul, #social ul{
@@ -216,6 +240,12 @@ span.comments{
     font-weight: bold;
     color: #3E3A39;
     font-size:30px;
+  }
+  #search{
+    width:120px;
+    line-height:normal !important;
+    border:none;
+    outline: none;
   }
 }
 
