@@ -293,14 +293,17 @@ span.comments{
   }
 }
 @media only screen and (max-width: 969px){
+  .bxslider{
+
+  }
   .bx-viewport {
     border:none !important;
-    height:150px !important;
     position:static !important;
+    height:auto !important;
   }
   .bx-wrapper{
     width:100%;
-    height:200px;
+    height:auto;
   }
   .bx-wrapper ul li img{
     width: 100%;
@@ -346,6 +349,13 @@ span.comments{
     cursor:pointer;
     font-family: 'Montserrat';
     font-weight:normal !important;
+  }
+  .col-md-6, .row{
+    padding:0px !important;
+    margin:0px !important;
+  }
+  .insta-detail{
+    display:none;
   }
 }
 
