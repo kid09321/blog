@@ -161,7 +161,19 @@ padding:0px;
 
 .footer {
   background-color: #ddd;
-  height:350px;
+  margin-top:15px;
+}
+.instagram-title{
+  font-family: 'Montserrat';
+  position:absolute;
+  color:white;
+  left:50%;
+  font-size:18px;
+  line-height:3.8;
+  margin-left: -56.5px;
+}
+.widget{
+  padding-top:70px;
 }
 .show-article {
   font-size: 16px;
@@ -207,6 +219,13 @@ span.comments{
 .bx-wrapper{
   width:1000px;
 }
+.copyright{
+  font-weight:bold;
+  font-size: 14px;
+  color:#B3B3B3;
+  text-align:center;
+  letter-spacing: 0.05em;
+}
 @media only screen and (min-width:1200px){
   .bx-wrapper{
     height:379px;
@@ -234,6 +253,7 @@ span.comments{
   }
   .col-md-6.brief{
     padding-left:40px;
+    margin-top:40px;
   }
   .title{
     font-family: 'Montserrat';
@@ -246,6 +266,30 @@ span.comments{
     line-height:normal !important;
     border:none;
     outline: none;
+  }
+  .article-image{
+    width:477px;
+    height:236px;
+  }
+  .pagination{
+    position: relative;
+    width:100%;
+    height:50px;
+    margin-bottom:50px !important;
+  }
+  .page-wrapper{
+    width: 100px;
+    line-height: 3;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+
+  .page{
+    color:#B3B3B3;
+    cursor:pointer;
+    font-family: 'Montserrat';
+    font-weight:normal !important;
   }
 }
 
