@@ -292,4 +292,60 @@ span.comments{
     font-weight:normal !important;
   }
 }
+@media only screen and (max-width: 969px){
+  .bx-viewport {
+    border:none !important;
+    height:150px !important;
+    position:static !important;
+  }
+  .bx-wrapper{
+    width:100%;
+    height:200px;
+  }
+  .bx-wrapper ul li img{
+    width: 100%;
+    height: auto;
+  }
+  .sliders{
+    padding:0px !important;
+  }
+  .logo-wrapper{
+    position:relative;
+    min-height:140px;
+  }
+  .logo {
+    position:absolute;
+    left:50%;
+    margin-left:-72px;
+  }
+  .article-image{
+    width:100%;
+    height:auto;
+  }
+  .title{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #3E3A39;
+    font-size:30px;
+  }
+  .pagination{
+    position: relative;
+    width:100%;
+    height:50px;
+    margin-bottom:50px !important;
+  }
+  .page-wrapper{
+    width: 100px;
+    line-height: 3;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+  .page{
+    color:#B3B3B3;
+    cursor:pointer;
+    font-family: 'Montserrat';
+    font-weight:normal !important;
+  }
+}
 
