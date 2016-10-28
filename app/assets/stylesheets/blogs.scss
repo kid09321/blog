@@ -251,6 +251,15 @@ span.comments{
     position:absolute;
     left:405px;
   }
+  .about-logo-wrapper{
+    position:relative;
+    text-align:center;
+  }
+  .about-logo{
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+  }
   .col-md-6.brief{
     padding-left:40px;
     margin-top:40px;
@@ -290,6 +299,33 @@ span.comments{
     cursor:pointer;
     font-family: 'Montserrat';
     font-weight:normal !important;
+  }
+  .contact-info{
+    position:relative;
+    font-family: 'Montserrat';
+    font-weight:bold;
+    color: #3E3A39;
+    font-size:24px;
+    text-align:center;
+    margin-top:40px;
+  }
+  .email,.facebook,.instagram{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .slogan{
+    font-family: 'Montserrat';
+    font-weight:bold;
+    color:#B3B3B3;
+    font-size:40px;
+    position:relative;
+    text-align:center;
+    margin-top:50px;
+  }
+  .center-slogan{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 @media only screen and (max-width: 969px){
@@ -356,6 +392,15 @@ span.comments{
   }
   .insta-detail{
     display:none;
+  }
+  .about-logo-wrapper{
+    position:relative;
+    text-align:center;
+  }
+  .about-logo{
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 

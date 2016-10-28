@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <title>ZHE</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="title" content="ZHE" />
+  <meta name="description" content="" />
+  <meta property="fb:app_id" content="156738658121186" />
+  <meta property="og:title" content="ZHE" />
+  <meta property="og:site_name" content="ZHE" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:image" content="http://i.imgur.com/3WdYAYm.jpg" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link rel="icon" href="http://i.imgur.com/m5ZFX7r.jpg">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:300,400,600,700&amp;lang=en" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <%= render 'shared/navbar' %>
+  </div>
+</div>
+<div style="margin-top:150px">
+  <div class="container">
+    <div class="about-logo-wrapper">
+      <div class="about-logo">
+        <img src="http://i.imgur.com/3WdYAYm.jpg"/>
+      </div>
+    </div>
+    <div class="contact-info">
+      <div class="email">Email:zhezheisma@gmail.com</div>
+      <div class="facebook">Facebook:zhezheisme</div>
+      <div class="instagram">Instagram:@zhezheisme</div>
+    </div>
+    <div class="slogan">
+      <div class="center-slogan">
+          GOOD SHOES<br>
+          TAKE YOU <br/>
+          GOOD PLACES  <br />
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:50px;min-height:300px">
+  <%= yield %>
+</div>
+<div class="copyright">
+ Copyright © 2016 ZHE
+</div>
+<%= render 'shared/footer', posts: @posts %>
+</body>
+</html>

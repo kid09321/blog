@@ -3,18 +3,18 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:sessions => "sessions/sessions"}
   root 'blogs#index'
   get '/index' => 'blogs#index'
-  resources :blogs
+  resources :blogs do
+    collection do
+      get :about
+    end
+  end
   resources :articles
   devise_scope :user do
     get '/admin/sign_up' => 'devise/registrations#new'
   end
   namespace :admin do
     root 'blogs#index'
-    resources :blogs do
-      collection do
-        get :about
-      end
-    end
+    resources :blogs
     resources :users
     resources :articles do
       collection do
