@@ -21,7 +21,9 @@ class BlogsController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
+
   def about
+    render :layout => 'about'
   end
 
   private
