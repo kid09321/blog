@@ -25,27 +25,29 @@
   </div>
 </div>
 <div class="collapse-header">
-  <ul>
-    <% @categories.try(:each) do |category| %>
-      <li><%= category.title %></li>
-    <% end %>
-    <li><a href="/blogs/about">About</a></li>
-    <li>
-      <a href="https://www.facebook.com/zhezheisme/" target="_blank">
-        Facebook
-      </a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/zhezheisme/" target="_blank">
-        Instagram
-      </a>
-    </li>
-    <li>
-      <a href="javascript:void(0)">
-        <input type="text" id="search" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'"/>
-      </a>
-    </li>
-  </ul>
+  <div class="collapse-wrapper">
+    <ul>
+      <% @categories.try(:each) do |category| %>
+        <li><%= category.title %></li>
+      <% end %>
+      <li><a href="/blogs/about">About</a></li>
+      <li>
+        <a href="https://www.facebook.com/zhezheisme/" target="_blank">
+          Facebook
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/zhezheisme/" target="_blank">
+          Instagram
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <input type="text" id="search" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'"/>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 <div class="about-content">
   <div class="container">
