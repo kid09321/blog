@@ -430,7 +430,7 @@ span.comments{
     height:200px;
   }
   .about-content{
-    margin-top:0px;
+    margin-top:5px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     z-index:99999;
@@ -456,33 +456,35 @@ span.comments{
   font-family: 'Montserrat' !important;
   font-weight: normal !important;
   color: #3E3A39;
-}
+  }
 
-:-moz-placeholder { /* Firefox 18- */
-  font-family: 'Montserrat' !important;
-  font-weight: normal !important;
-  color: #3E3A39;
-}
+  :-moz-placeholder { /* Firefox 18- */
+    font-fsamily: 'Montserrat' !important;
+    font-weight: normal !important;
+    color: #3E3A39;
+  }
 
-::-moz-placeholder {  /* Firefox 19+ */
-  font-family: 'Montserrat' !important;
-  font-weight: normal !important;
-  color: #3E3A39;
-}
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'Montserrat' !important;
+    font-weight: normal !important;
+    color: #3E3A39;
+  }
 
-:-ms-input-placeholder {
-  font-family: 'Montserrat' !important;
-  font-weight: normal !important;
-  color: #3E3A39;
-}
-.contact-info{
+  :-ms-input-placeholder {
+    font-family: 'Montserrat' !important;
+    font-weight: normal !important;
+    color: #3E3A39;
+  }
+  .contact-info{
     position:relative;
     font-family: 'Montserrat';
     font-weight:bold;
     color: #3E3A39;
     font-size:16px;
     text-align:center;
-    margin-top:40px;
+    padding-top:40px;
+    background-color:white;
+
   }
   .email,.facebook,.instagram{
     margin-left:auto;
@@ -504,6 +506,10 @@ span.comments{
   }
   .white-place{
     min-height:100px !important;
+  }
+  #search{
+    border:none;
+    outline: none;
   }
 }
 
