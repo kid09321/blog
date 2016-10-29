@@ -67,6 +67,15 @@ $(document).ready(function(){
     $('#cancel').hide();
     $('#new-category').show();
   });
+  $('#collapse-toggle').click(function(){
+    if ($(".collapse-header").css('height') == '0px'){
+      $(".collapse-header").css('height','150px');
+      $('.about-content').css('margin-top','0px');
+    }else{
+      $('.collapse-header').css('height','0px')
+      $('.about-content').css('margin-top','0px');
+    }
+  })
 });
 
 
