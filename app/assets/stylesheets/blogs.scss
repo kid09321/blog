@@ -475,5 +475,35 @@ span.comments{
   font-weight: normal !important;
   color: #3E3A39;
 }
+.contact-info{
+    position:relative;
+    font-family: 'Montserrat';
+    font-weight:bold;
+    color: #3E3A39;
+    font-size:16px;
+    text-align:center;
+    margin-top:40px;
+  }
+  .email,.facebook,.instagram{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .slogan{
+    font-family: 'Montserrat';
+    font-weight:bold;
+    color:#B3B3B3;
+    font-size:18px;
+    position:relative;
+    text-align:center;
+    margin-top:50px;
+  }
+  .center-slogan{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .white-place{
+    min-height:100px !important;
+  }
 }
 
