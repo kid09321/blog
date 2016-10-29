@@ -330,6 +330,9 @@ span.comments{
   .about-content{
     margin-top:150px;
   }
+  .collapse-header{
+    display:none;
+  }
 }
 @media only screen and (max-width: 969px){
   .bxslider{
@@ -427,7 +430,7 @@ span.comments{
     height:200px;
   }
   .about-content{
-    margin-top:100px;
+    margin-top:0px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     z-index:99999;
@@ -437,7 +440,7 @@ span.comments{
     display:none;
   }
   .collapse-header{
-    height:150px;
+    height:0px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     margin-top:90px;

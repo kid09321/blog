@@ -69,9 +69,7 @@ $(document).ready(function(){
   });
   $('#collapse-toggle').click(function(){
     if ($(".collapse-header").css('height') == '0px'){
-      $(".collapse-header").show();
       $(".collapse-header").css('height','150px');
-      $('.collapse-header').css('margin-top','90px');
       $('.about-content').css('margin-top','0px');
     }else{
       $('.collapse-header').css('height','0px')
