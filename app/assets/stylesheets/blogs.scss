@@ -133,7 +133,7 @@ a,ul {
 @media (min-width: 1200px) {
     .container{
         max-width: 950px;
-        padding: 0px;
+        padding-left: 0px !important;
     }
 }
 .instagram{
@@ -226,7 +226,10 @@ span.comments{
   text-align:center;
   letter-spacing: 0.05em;
 }
-@media only screen and (min-width:1200px){
+.container{
+  width:950px !important;
+}
+@media only screen and (min-width:970px){
   .bx-wrapper{
     height:379px;
   }
@@ -270,6 +273,7 @@ span.comments{
   .col-md-6.brief{
     padding-left:40px;
     margin-top:40px;
+    width:50% !important;
   }
   .title{
     font-family: 'Montserrat';
