@@ -183,7 +183,7 @@ padding:0px;
 }
 .insta-detail {
   opacity: 0;
-  z-index:99;
+  z-index:999;
   position: absolute;
   top:40%;
   height:auto;
@@ -327,10 +327,16 @@ span.comments{
     margin-left:auto;
     margin-right:auto;
   }
+  .about-content{
+    margin-top:150px;
+  }
 }
 @media only screen and (max-width: 969px){
   .bxslider{
 
+  }
+  .header-inner{
+    width:100%;
   }
   .bx-viewport {
     border:none !important;
@@ -396,11 +402,75 @@ span.comments{
   .about-logo-wrapper{
     position:relative;
     text-align:center;
+    z-index:9999;
+    background-color:white;
   }
   .about-logo{
     display: inline-block;
     margin-left:auto;
     margin-right:auto;
   }
+  .navbar-toggle .icon-bar{
+    background-color:black !important;
+    width:27px !important;
+    height:3px !important;
+  }
+  .navbar-toggle{
+    margin-top:20px !important;
+
+  }
+  #brand h1{
+    margin-left:15px !important;
+  }
+  .about-logo img{
+    width:200px;
+    height:200px;
+  }
+  .about-content{
+    margin-top:100px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    z-index:99999;
+    background-color:white;
+  }
+  .header-origin{
+    display:none;
+  }
+  .collapse-header{
+    height:150px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    margin-top:90px;
+  }
+  .collapse-header li{
+    height:30px;
+    line-height:30px;
+  }
+  .collapse-header ul{
+    padding-left:20px !important;
+  }
+  ::-webkit-input-placeholder {
+  font-family: 'Montserrat' !important;
+  font-weight: normal !important;
+  color: #3E3A39;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-family: 'Montserrat' !important;
+  font-weight: normal !important;
+  color: #3E3A39;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-family: 'Montserrat' !important;
+  font-weight: normal !important;
+  color: #3E3A39;
+}
+
+:-ms-input-placeholder {
+  font-family: 'Montserrat' !important;
+  font-weight: normal !important;
+  color: #3E3A39;
+}
 }
 

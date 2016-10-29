@@ -3,16 +3,48 @@
     <a href="/">ZHE</a>
   </h1>
 </div>
-<div id="navigation">
+<!-- 收縮時的按鈕 -->
+<button type="button" id="collapse-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+<div class="header-origin">
+  <div id="navigation">
+    <ul>
+      <% @categories.try(:each) do |category| %>
+        <li><%= category.title %></li>
+      <% end %>
+      <li><a href="/blogs/about">About</a></li>
+    </ul>
+  </div>
+  <div id="social">
+    <ul>
+      <li>
+        <a href="https://www.facebook.com/zhezheisme/" target="_blank">
+          <img src="http://i.imgur.com/rJIGpgt.jpg">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/zhezheisme/" target="_blank">
+          <img src="http://i.imgur.com/iVK5jP9.jpg">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <img src="http://i.imgur.com/RSlZtad.jpg" />
+          <input type="text" id="search" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- <div class="collapse-header" style="display:none;">
   <ul>
     <% @categories.try(:each) do |category| %>
       <li><%= category.title %></li>
     <% end %>
     <li><a href="/blogs/about">About</a></li>
-  </ul>
-</div>
-<div id="social">
-  <ul>
     <li>
       <a href="https://www.facebook.com/zhezheisme/" target="_blank">
         <img src="http://i.imgur.com/rJIGpgt.jpg">
@@ -30,5 +62,5 @@
       </a>
     </li>
   </ul>
-</div>
+</div> -->
 
