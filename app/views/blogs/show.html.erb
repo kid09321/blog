@@ -17,6 +17,7 @@
     <div class="also-like">
       <h3>You may also like...</h3>
       <div class="row">
+      <% if @similar_articles %>
         <% @similar_articles.each do |similar_article| %>
           <div class="col-md-6">
             <div class="also-like-image">
@@ -34,6 +35,7 @@
             </div>
           </div>
         <% end %>
+      <% end %>
       </div>
     </div>
     <div id="article-comments-<%= @article.id %>"class="fb-comments" data-href="http://www.zhezheisme.com/blogs/<%= @article.id %>" data-width="950" data-numposts="10"></div>
