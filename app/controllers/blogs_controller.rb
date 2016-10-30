@@ -20,6 +20,7 @@ class BlogsController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RANDOM()").limit(2);
   end
 
   def about

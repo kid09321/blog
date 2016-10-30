@@ -235,6 +235,28 @@ span.comments{
   font-family: 'Montserrat';
   color:#3E3A39;;
 }
+.also-like .row{
+  padding-top:20px;
+}
+.also-like-image img{
+  width:450px;
+  height:225px;
+}
+.also-like-title{
+  text-align:left;
+  padding-top:20px;
+  font-size:24px;
+  font-weight:bold;
+}
+.also-like-article{
+  text-align:left;
+  padding-top:5px;
+  font-size: 16px;
+  font-family: 'proxima-nova';
+  line-height: 16px;
+  color: #838383;
+}
+
 @media only screen and (min-width:970px){
   .bx-wrapper{
     height:379px;
@@ -349,6 +371,9 @@ span.comments{
   }
   .collapse-header{
     display:none;
+  }
+  .also-like{
+    text-align: center;
   }
 }
 @media only screen and (max-width: 969px){
@@ -478,24 +503,28 @@ span.comments{
   font-family: 'Montserrat' !important;
   font-weight: normal !important;
   color: #3E3A39;
+  font-size:12px;
   }
 
   :-moz-placeholder { /* Firefox 18- */
     font-fsamily: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
+    font-size:12px;
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
     font-family: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
+    font-size:12px;
   }
 
   :-ms-input-placeholder {
     font-family: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
+    font-size:12px;
   }
   .contact-info{
     position:relative;
@@ -569,6 +598,28 @@ span.comments{
     padding-top: 20px;
     position:relative;
     background-color:white;
+  }
+
+  .also-like .row .col-md-6{
+    padding-top:20px !important;
+  }
+  .also-like-image img{
+    width:450px;
+    height:225px;
+  }
+  .also-like-title{
+    text-align:left;
+    padding-top:20px;
+    font-size:24px;
+    font-weight:bold;
+  }
+  .also-like-article{
+    text-align:left;
+    padding-top:5px;
+    font-size: 16px;
+    font-family: 'proxima-nova';
+    line-height: 16px;
+    color: #838383;
   }
 }
 
