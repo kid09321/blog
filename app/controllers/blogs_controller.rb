@@ -20,7 +20,12 @@ class BlogsController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RANDOM()").limit(2);
+
+    if Rails.env.production?
+      @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RAND()").limit(2);
+    else
+      @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RANDOM()").limit(2);
+    end
   end
 
   def about
