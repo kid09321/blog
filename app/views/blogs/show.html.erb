@@ -14,6 +14,28 @@
     <div class="articles">
       <%= @article.content.try(:html_safe) %>
     </div>
+    <div class="also-like">
+      <h3>You may also like...</h3>
+      <div class="row">
+        <% @similar_articles.each do |similar_article| %>
+          <div class="col-md-6">
+            <div class="also-like-image">
+              <a href="<%= blog_path(similar_article) %>">
+                <img src="<%= similar_article.first_image_link %>" class="article-image"/>
+              </a>
+            </div>
+            <div class="also-like-title">
+              <a href="<%= blog_path(similar_article) %>">
+                <%= similar_article.title%>
+              </a>
+            </div>
+            <div class="also-like-article">
+              <%= truncate(similar_article.only_words, length: 60) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <div id="article-comments-<%= @article.id %>"class="fb-comments" data-href="http://www.zhezheisme.com/blogs/<%= @article.id %>" data-width="950" data-numposts="10"></div>
   </div>
 </div>
