@@ -503,28 +503,24 @@ span.comments{
   font-family: 'Montserrat' !important;
   font-weight: normal !important;
   color: #3E3A39;
-  font-size:12px;
   }
 
   :-moz-placeholder { /* Firefox 18- */
     font-fsamily: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
-    font-size:12px;
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
     font-family: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
-    font-size:12px;
   }
 
   :-ms-input-placeholder {
     font-family: 'Montserrat' !important;
     font-weight: normal !important;
     color: #3E3A39;
-    font-size:12px;
   }
   .contact-info{
     position:relative;
@@ -559,9 +555,9 @@ span.comments{
     min-height:100px !important;
   }
   #search{
-    border:none;
+    border:1px solid black;
     outline: none;
-    height:23px;
+    line-height:normal;
   }
   #collapse-toggle{
     display:block !important;
@@ -620,6 +616,9 @@ span.comments{
     font-family: 'proxima-nova';
     line-height: 16px;
     color: #838383;
+  }
+  .search {
+    line-height:0px !important;
   }
 }
 
