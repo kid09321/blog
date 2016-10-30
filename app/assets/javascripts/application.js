@@ -70,7 +70,7 @@ $(document).ready(function(){
   $('#collapse-toggle').click(function(){
     if ($(".collapse-header").css('height') == '0px'){
       $('.collapse-wrapper').show();
-      $(".collapse-header").css('height',$('.collapse-wrapper').height()+'px');
+      $(".collapse-header").css('height', String(parseInt($('.collapse-wrapper').height())+ 10) +'px');
     }else{
       $('.collapse-header').css('height','0px')
     }
