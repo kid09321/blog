@@ -229,6 +229,12 @@ span.comments{
 .container{
   width:950px !important;
 }
+.articles{
+  padding-top:20px;
+  font-size:18px;
+  font-family: 'Montserrat';
+  color:#3E3A39;;
+}
 @media only screen and (min-width:970px){
   .bx-wrapper{
     height:379px;
@@ -526,6 +532,7 @@ span.comments{
   #search{
     border:none;
     outline: none;
+    height:23px;
   }
   #collapse-toggle{
     display:block !important;
@@ -542,6 +549,26 @@ span.comments{
   .main-content .container{
     margin:0px !important;
     width:100% !important;
+  }
+  .collapse-wrapper {
+    display:none;
+  }
+  .collapse-wrapper ul li{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: #3E3A39;
+  }
+  .collapse-wrapper ul li img{
+    width:23px;
+    height:23px;
+  }
+  .wrap {
+    margin-top:0px;
+  }
+  .wrap .container{
+    padding-top: 20px;
+    position:relative;
+    background-color:white;
   }
 }
 
