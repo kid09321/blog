@@ -233,7 +233,8 @@ span.comments{
   padding-top:20px;
   font-size:18px;
   font-family: 'Montserrat';
-  color:#3E3A39;;
+  color:#3E3A39;
+  background-color:white;
 }
 .also-like .row{
   padding-top:20px;
@@ -308,6 +309,9 @@ span.comments{
     font-weight: bold;
     color: #3E3A39;
     font-size:30px;
+  }
+  .search-form{
+    display:inline-block;
   }
   #search{
     width:65px;
@@ -554,6 +558,9 @@ span.comments{
   .white-place{
     min-height:100px !important;
   }
+  .search-form{
+    display:inline-block;
+  }
   #search{
     border:1px solid black;
     outline: none;
@@ -574,6 +581,7 @@ span.comments{
   .main-content .container{
     margin:0px !important;
     width:100% !important;
+    position:relative;
   }
   .collapse-wrapper {
     display:none;

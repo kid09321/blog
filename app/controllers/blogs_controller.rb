@@ -28,6 +28,17 @@ class BlogsController < ApplicationController
     end
   end
 
+  def search
+    @search = params[:search]
+    @articles = Article.all.where("title LIKE ?","%#{@search}%")
+    @page = params[:page].present? ? params[:page] : 1
+    @page = @page.to_i
+    Rails.logger.info("========page#{@page}")
+    @articles_per_page = 4
+    @all_pages = (@articles.size.to_f / @articles_per_page).ceil
+    @articles = @articles.all.order("id DESC").limit(@articles_per_page).offset(@articles_per_page * @page - 4)
+  end
+
   def about
     render :layout => 'about'
   end

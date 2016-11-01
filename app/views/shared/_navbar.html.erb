@@ -33,7 +33,9 @@
       <li>
         <a href="javascript:void(0)">
           <img src="http://i.imgur.com/RSlZtad.jpg" />
-          <input type="text" id="search" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'"/>
+          <form class="search-form" method="get" action="/blogs/search">
+            <input type="text" id="search" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'"/>
+          </form>
         </a>
       </li>
     </ul>
