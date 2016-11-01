@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :blogs do
     collection do
       get :about
+      get :search
     end
   end
   resources :categories
