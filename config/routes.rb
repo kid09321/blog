@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get :about
     end
   end
+  resources :categories
   resources :articles
   devise_scope :user do
     get '/admin/sign_up' => 'devise/registrations#new'

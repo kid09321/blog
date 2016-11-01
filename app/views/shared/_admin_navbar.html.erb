@@ -8,13 +8,6 @@
     <li>Welcome Back ! <%= current_user.username %></li>
   </ul>
 </div>
-<div id="social">
-  <ul>
-    <li>
-      <a href="http://www.facebook.com"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-    </li>
-  </ul>
-</div>
 <div id="login">
 <% if !current_user %>
 <%= link_to("登入", new_user_session_path) %>
