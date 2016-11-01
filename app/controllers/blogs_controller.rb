@@ -37,7 +37,7 @@ class BlogsController < ApplicationController
     @articles_per_page = 4
     @all_pages = (@articles.size.to_f / @articles_per_page).ceil
     @articles = @articles.all.order("id DESC").limit(@articles_per_page).offset(@articles_per_page * @page - 4)
-    render :layout => 'search'
+    render 'blogs/search'
   end
 
   def about
