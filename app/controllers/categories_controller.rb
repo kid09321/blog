@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @articles = Article.where(category_id: params[:id])
+    @articles = Article.order("id DESC").where(category_id: params[:id])
     @page = params[:page].present? ? params[:page] : 1
     @page = @page.to_i
     Rails.logger.info("========page#{@page}")
