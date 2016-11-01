@@ -1,0 +1,88 @@
+<div class="container sliders">
+  <div class="articles">
+    <% @articles.each do |article| %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image">
+          <a href="<%= blog_path(article) %>">
+            <img src="<%= article.first_image_link %>" class="article-image"/>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 brief">
+        <div class="title">
+          <a href="<%= blog_path(article) %>">
+            <%= article.title%>
+          </a>
+        </div>
+        <div class="show-article">
+          <%= truncate(article.only_words, length: 60) %>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!-- 分頁 -->
+<div class="pagination">
+  <div class="page-wrapper">
+    <% if @all_pages <= 3 %>
+      <% Array(1..@all_pages).each do |page| %>
+        <span class="page" style="margin-right:3px;"><%= page %></span>
+      <% end %>
+    <% elsif @page == 1 %>
+      <span class="page" style="margin-right:3px;">1</span>
+      <span class="page" style="margin-right:3px;">2</span>
+      <span class="page" style="margin-right:3px;">3</span>
+      <span style="margin-right:3px; color:#B3B3B3;">...</span>
+      <span class="page" style="margin-right:3px;">&gt;</span>
+    <% elsif @page == @all_pages %>
+      <span class="page" style="margin-right:3px;">&lt;</span>
+      <span style="margin-right:3px; color:#B3B3B3;">...</span>
+      <span class="page" style="margin-right:3px;"><%= @all_pages - 2%></span>
+      <span class="page" style="margin-right:3px;"><%= @all_pages - 1 %></span>
+      <span class="page" style="margin-right:3px;"><%= @all_pages %></span>
+    <% else %>
+      <span class="page" style="margin-right:3px;">&lt;</span>
+      <span class="page" style="margin-right:3px;"><%= @page - 1%></span>
+      <span class="page" style="margin-right:3px;"><%= @page %></span>
+      <span class="page" style="margin-right:3px;"><%= @page + 1 %></span>
+      <span class="page" style="margin-right:3px;">&gt;</span>
+    <% end %>
+
+  </div>
+</div>
+<script>
+  // 滾動捲軸會讓header縮小
+  // $(document).on("scroll", function(){
+  //   if
+  //     ($(document).scrollTop() > 100){
+  //     $(".header").addClass("shrink");
+  //   }
+  //   else
+  //   {
+  //     $(".header").removeClass("shrink");
+  //   }
+  // });
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      auto: true,
+      autoControllers: true,
+      slideWidth: 950,
+      captions: true,
+      hyperlinks:true
+    });
+    $('.page').click(function(){
+      page = $(this).text();
+      all_pages = <%= @all_pages %>;
+      if (page != '<' && page != '>'){
+        window.location.replace("/categories/"+String(<%= @category.id %>)+"/?page="+page);
+      } else if (page == '<') {
+        window.location.replace("/categories/"+String(<%= @category.id %>)+"?page=1");
+      } else {
+        window.location.replace("/categories/"+String(<%= @category.id %>)+"?page="+ all_pages);
+      }
+    })
+  });
+</script>
