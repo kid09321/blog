@@ -136,6 +136,42 @@ a,ul {
         padding-left: 0px !important;
     }
 }
+.login-container{
+  width:25%;
+  margin-right:auto;
+  margin-left:auto;
+}
+.login-field{
+  text-align:center;
+}
+.login-label{
+  font-size:16px;
+  margin-bottom:10px;
+  margin-top:5px;
+}
+.remember_me{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.login-field input{
+  width:200px;
+  height:30px;
+  border-radius:5px;
+}
+#user_remember_me{
+  height:16px;
+  width:16px;
+}
+.login-actions{
+  text-align:center;
+}
+.forget-password{
+  text-align:center;
+  margin-top:10px;
+}
+.wrapper{
+  width:100%;
+}
 .instagram{
   width:100%;
   position: relative;
@@ -503,6 +539,9 @@ span.comments{
   }
   .collapse-header ul{
     padding-left:20px !important;
+  }
+  input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
   ::-webkit-input-placeholder {
   font-family: 'Montserrat' !important;
