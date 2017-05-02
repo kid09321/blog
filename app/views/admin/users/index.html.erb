@@ -1,32 +1,30 @@
-<div class="login-container">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <td>
-          使用者名稱
-        </td>
-        <td>
-          信箱
-        </td>
-        <td>
-          註冊日期
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td>
-          <%= user.username%>
-        </td>
-        <td>
-          <%= user.email %>
-        </td>
-        <td>
-          <%= user.created_at.strftime("%Y-%m-%d") %>
-        </td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>
+        使用者名稱
+      </td>
+      <td>
+        信箱
+      </td>
+      <td>
+        註冊日期
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td>
+        <%= user.username%>
+      </td>
+      <td>
+        <%= user.email %>
+      </td>
+      <td>
+        <%= user.created_at.strftime("%Y-%m-%d") %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

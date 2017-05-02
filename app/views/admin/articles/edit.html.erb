@@ -15,5 +15,7 @@
   </select>
   <%= f.cktext_area :content, id: 'sometext' %>
   <!-- <%= cktext_area :page, :info, cols: 40, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %> -->
-  <%= f.submit "修改完成", :disable_with => 'Submiting...' %>
+  <div style="margin-top:10px;">
+    <%= f.submit "修改完成",:class => "btn btn-default", :disable_with => 'Submiting...' %>
+  </div>
 <% end %>
