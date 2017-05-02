@@ -11,8 +11,7 @@ class CategoriesController < ApplicationController
     @articles_per_page = 4
     @all_pages = (@articles.size.to_f / @articles_per_page).ceil
     Rails.logger.info("========all-page#{@all_pages}")
-    @instagram_posts = Instagram::InstagramPosts.new('self','635574010.1677ed0.cdd432f04d92473cac4e6927dd47bfde
-').get_posts
+    @instagram_posts = Instagram::InstagramPosts.new('self','4037665705.1677ed0.0fbe1530bc1b4acaa1cd5e60fd85abff').get_posts
     @posts = JSON.parse(@instagram_posts)['data']
     @articles = @articles.limit(@articles_per_page).offset(@articles_per_page * @page - 4)
   end
@@ -20,8 +19,7 @@ class CategoriesController < ApplicationController
   private
 
   def get_instagram_posts
-    @instagram_posts = Instagram::InstagramPosts.new('self','635574010.1677ed0.cdd432f04d92473cac4e6927dd47bfde
-').get_posts
+    @instagram_posts = Instagram::InstagramPosts.new('self','4037665705.1677ed0.0fbe1530bc1b4acaa1cd5e60fd85abff').get_posts
     @posts = JSON.parse(@instagram_posts)['data']
   end
 
