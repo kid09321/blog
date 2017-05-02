@@ -16,6 +16,7 @@ class BlogsController < ApplicationController
     @slider_link_1 = Link.where(link_type: 'slider-1').first
     @slider_link_2 = Link.where(link_type: 'slider-2').first
     @slider_link_3 = Link.where(link_type: 'slider-3').first
+    Rails.logger.info("=======get_posts#{@instagram_posts}")
   end
 
   def show
