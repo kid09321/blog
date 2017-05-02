@@ -75,6 +75,21 @@ $(document).ready(function(){
       $('.collapse-header').css('height','0px')
     }
   })
+  $('#first-pic').click(function(){
+    $('#second-banner-pic').hide();
+    $('#third-banner-pic').hide();
+    $('#first-banner-pic').show();
+  })
+  $('#second-pic').click(function(){
+    $('#first-banner-pic').hide();
+    $('#third-banner-pic').hide();
+    $('#second-banner-pic').show();
+  })
+  $('#third-pic').click(function(){
+    $('#first-banner-pic').hide();
+    $('#second-banner-pic').hide();
+    $('#third-banner-pic').show();
+  })
 });
 
 
