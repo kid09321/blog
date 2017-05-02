@@ -90,6 +90,15 @@ $(document).ready(function(){
     $('#second-banner-pic').hide();
     $('#third-banner-pic').show();
   })
+  /* 為了解決 輪播圖片重新load "uploads/sliders"中的圖片*/
+  d = new Date();
+  $('#slider-1').attr("src", "/uploads/sliders/slider-1.jpg?" +d.getTime());
+  $('#slider-2').attr("src", "/uploads/sliders/slider-2.jpg?" +d.getTime());
+  $('#slider-3').attr("src", "/uploads/sliders/slider-3.jpg?" +d.getTime());
+  $('.slider-1').attr("src", "/uploads/sliders/slider-1.jpg?" +d.getTime());
+  $('.slider-2').attr("src", "/uploads/sliders/slider-2.jpg?" +d.getTime());
+  $('.slider-3').attr("src", "/uploads/sliders/slider-3.jpg?" +d.getTime());
+
 });
 
 
