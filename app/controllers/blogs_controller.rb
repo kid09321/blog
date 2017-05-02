@@ -23,9 +23,9 @@ class BlogsController < ApplicationController
     @article = Article.find_by_title(params[:id])
 
     if Rails.env.production?
-      @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RAND()").limit(2);
+      @similar_articles = Article.where.not(title:params[:id]).where(category_id:@article.category_id).order("RAND()").limit(2);
     else
-      @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RANDOM()").limit(2);
+      @similar_articles = Article.where.not(title:params[:id]).where(category_id:@article.category_id).order("RANDOM()").limit(2);
     end
   end
 
