@@ -3,8 +3,8 @@ class CategoriesController < ApplicationController
   before_action :all_categories
 
   def show
-    @category = Category.find(params[:id])
-    @articles = Article.order("id DESC").where(category_id: params[:id])
+    @category = Category.find_by_title(params[:id])
+    @articles = Article.order("id DESC").where(category_id: @category.id)
     @page = params[:page].present? ? params[:page] : 1
     @page = @page.to_i
     Rails.logger.info("========page#{@page}")

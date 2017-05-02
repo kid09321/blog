@@ -13,7 +13,7 @@
   <div id="navigation">
     <ul>
       <% @categories.try(:each) do |category| %>
-        <li><a href="<%= category_path(category) %>"><%= category.title %></a></li>
+        <li><a href="<%= category_path(category.title) %>"><%= category.title %></a></li>
       <% end %>
       <li><a href="/blogs/about">About</a></li>
     </ul>
