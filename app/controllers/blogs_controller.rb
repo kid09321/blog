@@ -9,13 +9,13 @@ class BlogsController < ApplicationController
     @articles_per_page = 4
     @all_pages = (Article.all.size.to_f / @articles_per_page).ceil
     Rails.logger.info("========all-page#{@all_pages}")
-    @instagram_posts = Instagram::InstagramPosts.new('self','635574010.1677ed0.cdd432f04d92473cac4e6927dd47bfde
-').get_posts
+    @instagram_posts = Instagram::InstagramPosts.new('self','4037665705.1677ed0.0fbe1530bc1b4acaa1cd5e60fd85abff').get_posts
     @posts = JSON.parse(@instagram_posts)['data']
     @articles = Article.all.order("id DESC").limit(@articles_per_page).offset(@articles_per_page * @page - 4)
     @slider_link_1 = Link.where(link_type: 'slider-1').first
     @slider_link_2 = Link.where(link_type: 'slider-2').first
     @slider_link_3 = Link.where(link_type: 'slider-3').first
+    Rails.logger.info("=======get_posts#{@instagram_posts}")
   end
 
   def show
