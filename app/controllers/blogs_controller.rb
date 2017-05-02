@@ -19,7 +19,8 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    Rails.logger.info("============#{params[:title]}")
+    @article = Article.find_by_title(params[:id])
 
     if Rails.env.production?
       @similar_articles = Article.where.not(id:params[:id]).where(category_id:@article.category_id).order("RAND()").limit(2);
