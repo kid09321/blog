@@ -24,6 +24,9 @@ class BlogsController < ApplicationController
       home_page_popularity = Popularity.where(:article_id => 0).first
       home_page_popularity.popularity += 1
       home_page_popularity.save
+      everyday_popularity = Popularity.where(:article_id => 1).first
+      everyday_popularity.popularity += 1
+      everyday_popularity.save
       cookies[:user_ip] = { :value => "#{request.remote_ip}", :expires => @expire_time }
     end
     @popularity = Popularity.where(:article_id => 0).first.popularity

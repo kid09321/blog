@@ -8,6 +8,7 @@ class Admin::BlogsController < ApplicationController
     @slider_link_2 = Link.where(link_type: 'slider-2').first
     @slider_link_3 = Link.where(link_type: 'slider-3').first
     @total_popularities = Popularity.where(article_id:0).first.popularity
+    @today_popularities = Popularity.where(article_id:1).first.popularity
   end
 
   private
