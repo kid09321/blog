@@ -15,7 +15,19 @@ class BlogsController < ApplicationController
     @slider_link_1 = Link.where(link_type: 'slider-1').first
     @slider_link_2 = Link.where(link_type: 'slider-2').first
     @slider_link_3 = Link.where(link_type: 'slider-3').first
-    Rails.logger.info("=======get_posts#{@instagram_posts}")
+    /每日人氣/
+    @expire_time = Time.now.tomorrow.beginning_of_day
+    @request_ip = request.env['REMOTE_ADDR']
+    Rails.logger.info("=======expire_time = #{@expire_time}")
+    Rails.logger.info("=======request_ip  = #{@request_ip}")
+    if !cookies[:user_ip]
+      home_page_popularity = Popularity.where(:article_id => 0).first
+      home_page_popularity.popularity += 1
+      home_page_popularity.save
+      cookies[:user_ip] = { :value => "#{request.remote_ip}", :expires => @expire_time }
+    end
+    @popularity = Popularity.where(:article_id => 0).first.popularity
+    Rails.logger.info("#{@popularity}")
   end
 
   def show
