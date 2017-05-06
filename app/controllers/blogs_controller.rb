@@ -3,6 +3,7 @@ class BlogsController < ApplicationController
   before_action :all_categories
 
   def index
+    Rails.logger.info("======mailgun#{ENV["MAILGUN_USER"]}")
     @page = params[:page].present? ? params[:page] : 1
     @page = @page.to_i
     Rails.logger.info("========page#{@page}")
