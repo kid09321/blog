@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
-  <title>ZHE</title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <meta name="title" content="ZHE" />
   <meta name="description" content="" />
   <meta property="fb:app_id" content="156738658121186" />
   <meta property="og:title" content="ZHE" />
   <meta property="og:site_name" content="ZHE" />
   <meta property="og:type" content="blog" />
   <% if @article %>
+    <title><%= @article.title %> | ZHE</title>
     <meta property="og:image" content="<%= @article.first_image_link %>" />
+    <meta name="title" content="<%= @article.title %>" />
+    <meta property="og:title" content="<%= @article.title %>" />
   <% else %>
+    <title>ZHE</title>
+    <meta name="title" content="ZHE" />
+    <meta property="og:title" content="ZHE" />
     <meta property="og:image" content="http://i.imgur.com/3WdYAYm.jpg" />
   <% end %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

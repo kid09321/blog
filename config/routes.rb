@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     root 'blogs#index'
-    resources :blogs
+    resources :blogs do
+      collection do
+        get :popularity
+      end
+    end
     resources :users
     resources :articles do
       collection do

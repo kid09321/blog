@@ -1,0 +1,45 @@
+<div class="week_flow">
+</div>
+  <h3>
+    <span></span>
+  </h3>
+
+<script>
+var week_flow = []
+var popularities_in_a_week = <%= @popularities_in_a_week.to_json.html_safe %>
+$.each(popularities_in_a_week,function(key,obj){
+  console.log(popularities_in_a_week);
+  date = obj.created_at.substring(0,10); //日期
+  popularity = obj.popularity; //該日期的人數
+  week_flow[key] = {date:date,popularity:popularity,y:key * 35}
+  console.log(week_flow);
+});
+console.log(week_flow[0].date);
+ var s = d3.select('.week_flow').append('svg').attr({
+            'width':650,
+            'height':300
+          });
+
+    s.selectAll('rect').data(week_flow).enter().append('rect').attr({
+      'fill':'#09c',
+      'width':function(d){
+        return (d.popularity)*10;
+      },
+      'height':30,
+      'x':0,
+      'y':function(d){
+        return (d.y);
+      }
+     });
+  s.selectAll('text').data(week_flow).enter().append('text').text(function(d){
+  return  d.date+'  /  人數: '+d.popularity;
+  }).attr({
+  'fill':'#000',
+  'x':function(d){
+    return d.popularity;
+  },
+  'y':function(d){
+    return d.y+20;
+  }
+ });
+</script>
