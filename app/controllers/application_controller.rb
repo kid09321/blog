@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
   end
 
   def build_everyday_popularity_data
-    @every_popularity = Popularity.where(:article_id => 1).first
+    @today = Date.today
+    @every_popularity = Popularity.where(:article_id => 1,:created_at => (@today.beginning_of_day..@today.end_of_day)).first
     if !@every_popularity
       @popularity = Popularity.new(article_id: 1, popularity: 0)
       @popularity.save
