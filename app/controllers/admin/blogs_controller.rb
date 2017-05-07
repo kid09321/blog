@@ -12,6 +12,11 @@ class Admin::BlogsController < ApplicationController
     @today_popularities = Popularity.where(article_id:1,created_at: @today.beginning_of_day..@today.end_of_day).first.popularity
   end
 
+  def popularity
+    @today = Date.today
+    @popularities_in_a_week = Popularity.where(article_id:1,created_at: 7.days.ago..@today.end_of_day).all
+  end
+
   private
 
   def admin?
