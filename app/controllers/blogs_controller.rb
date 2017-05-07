@@ -19,13 +19,14 @@ class BlogsController < ApplicationController
     /每日人氣/
     @expire_time = Time.now.tomorrow.beginning_of_day
     @request_ip = request.env['REMOTE_ADDR']
-    Rails.logger.info("=======expire_time = #{@expire_time}")
-    Rails.logger.info("=======request_ip  = #{@request_ip}")
-    if !cookies[:user_ip]
+    if !cookies[:user_ip] #沒有cookie
+      # 累積人次
       home_page_popularity = Popularity.where(:article_id => 0).first
       home_page_popularity.popularity += 1
       home_page_popularity.save
-      everyday_popularity = Popularity.where(:article_id => 1).first
+      # 當日人次
+      @today = Date.today
+      everyday_popularity = Popularity.where(:created_at => (@today.beginning_of_day..@today.end_of_day),:article_id => 1).first
       everyday_popularity.popularity += 1
       everyday_popularity.save
       cookies[:user_ip] = { :value => "#{request.remote_ip}", :expires => @expire_time }
