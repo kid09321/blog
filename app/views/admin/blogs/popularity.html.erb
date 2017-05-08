@@ -15,31 +15,35 @@ $.each(popularities_in_a_week,function(key,obj){
   console.log(week_flow);
 });
 console.log(week_flow[0].date);
+//將svg接在week_flow這個tag後並設定size
  var s = d3.select('.week_flow').append('svg').attr({
             'width':650,
             'height':300
           });
-
+//用rect把資料用長條圖表示
     s.selectAll('rect').data(week_flow).enter().append('rect').attr({
-      'fill':'#09c',
-      'width':function(d){
-        return (d.popularity)*10;
-      },
-      'height':30,
+      'height':18,
       'x':0,
       'y':function(d){
-        return (d.y);
+        return (d.y);//每筆資料的長條圖的間隔
       }
-     });
+     }).attr({
+      'class':'popularity_chart',
+      'fill':'#09c'}).style('margin-left','120px').attr(
+      'width',0).transition().duration(500).attr(
+        'width',function(d){
+        return (d.popularity)*5; //每筆資料長條圖的長度
+      });
+  //顯示該長條圖中該筆資料為何
   s.selectAll('text').data(week_flow).enter().append('text').text(function(d){
   return  d.date+'  /  人數: '+d.popularity;
   }).attr({
   'fill':'#000',
   'x':function(d){
-    return d.popularity;
+    return 450;
   },
   'y':function(d){
-    return d.y+20;
+    return d.y+14;
   }
  });
 </script>
