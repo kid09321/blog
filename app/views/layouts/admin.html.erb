@@ -12,6 +12,7 @@
   <link rel="icon" href="http://i.imgur.com/m5ZFX7r.jpg">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:300,400,600,700&amp;lang=en" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/bfc066476e/UntitledProject/style.css">
 </head>
 <body>
   <div class="header">
@@ -25,12 +26,12 @@
         <div class="row">
           <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-              <li> <%= link_to("總覽", admin_blogs_path)%></li>
-              <li> <%= link_to("使用者列表", admin_users_path) %></li>
-              <li> <%= link_to("文章列表", admin_articles_path) %></li>
-              <li> <%= link_to("新增文章", new_admin_article_path) %></li>
-              <li> <%= link_to("文章分類", admin_categories_path) %></li>
-              <li> <%= link_to("查看流量", "/admin/blogs/popularity") %></li>
+              <li> <%= link_to(" 總覽", admin_blogs_path, class: 'icon-home')%></li>
+              <li> <%= link_to(" 使用者列表", admin_users_path, class: 'icon-user') %></li>
+              <li> <%= link_to(" 文章列表", admin_articles_path, class: 'icon-file-empty') %></li>
+              <li> <%= link_to(" 新增文章", new_admin_article_path, class: 'icon-pencil') %></li>
+              <li> <%= link_to(" 文章分類", admin_categories_path, class: 'icon-books') %></li>
+              <li> <%= link_to(" 查看流量", "/admin/blogs/popularity", class: 'icon-stats-dots') %></li>
             </ul>
           </div>
           <div class="col-md-10">
