@@ -13,8 +13,17 @@ class Admin::BlogsController < ApplicationController
   end
 
   def popularity
+    if params["from_date"]
+      @start_day = params["from_date"].to_i
+      @days_ago_time = @start_day.days.ago.beginning_of_day
+    elsif params["month_ago"]
+      @start_day = params["month_ago"].to_i
+      @days_ago_time = @start_day.month.ago.beginning_of_day
+    else
+      @days_ago_time = 7.days.ago.beginning_of_day
+    end
     @today = Date.today
-    @popularities_in_a_week = Popularity.where(article_id:1,created_at: 7.days.ago..@today.end_of_day).order(:created_at => :desc)
+    @popularities_in_a_week = Popularity.where(article_id:1,created_at: @days_ago_time..@today.end_of_day).order(:created_at => :desc)
   end
 
   private
