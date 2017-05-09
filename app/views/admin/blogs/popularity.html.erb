@@ -1,3 +1,30 @@
+<div class="row">
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <% if params['month_ago']%>
+    <%= "最近一個月" %>
+  <% elsif params['from_date'] %>
+    <% if params['from_date'] == '7' %>
+      <%= "最近一週" %>
+    <% elsif params['from_date'] == '14' %>
+      <%= "最近兩週" %>
+    <% elsif params['from_date'] == '21' %>
+      <%= "最近三週" %>
+    <% end %>
+  <% else %>
+    <%= "最近一週" %>
+  <% end %>
+     <span id="time_interval" class="caret"></span>
+  </button>
+  <ul id="popularity_interval"class="dropdown-menu" role="menu">
+    <li><a href="?from_date=7">最近一週</a></li>
+    <li><a href="?from_date=14">最近兩週</a></li>
+    <li><a href="?from_date=21">最近三週</a></li>
+    <li><a href="?month_ago=1">最近一個月</a></li>
+  </ul>
+</div>
+</div>
 <div class="week_flow">
 </div>
   <h3>
