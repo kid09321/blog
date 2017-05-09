@@ -14,7 +14,7 @@ class Admin::BlogsController < ApplicationController
 
   def popularity
     @today = Date.today
-    @popularities_in_a_week = Popularity.where(article_id:1,created_at: 7.days.ago..@today.end_of_day).all
+    @popularities_in_a_week = Popularity.where(article_id:1,created_at: 7.days.ago..@today.end_of_day).order(:created_at => :desc)
   end
 
   private
