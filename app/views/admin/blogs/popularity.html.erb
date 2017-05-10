@@ -1,36 +1,43 @@
 <div class="row">
-<!-- Single button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-  <% if params['month_ago']%>
-    <%= "最近一個月" %>
-  <% elsif params['from_date'] %>
-    <% if params['from_date'] == '7' %>
-      <%= "最近一週" %>
-    <% elsif params['from_date'] == '14' %>
-      <%= "最近兩週" %>
-    <% elsif params['from_date'] == '21' %>
-      <%= "最近三週" %>
-    <% end %>
-  <% else %>
-    <%= "最近一週" %>
-  <% end %>
-     <span id="time_interval" class="caret"></span>
-  </button>
-  <ul id="popularity_interval"class="dropdown-menu" role="menu">
-    <li><a href="?from_date=7">最近一週</a></li>
-    <li><a href="?from_date=14">最近兩週</a></li>
-    <li><a href="?from_date=21">最近三週</a></li>
-    <li><a href="?month_ago=1">最近一個月</a></li>
+  <ul class="nav nav-tabs" style="width:600px;">
+    <li id="website_popularity" class="active"><a href="#">網頁人氣</a></li>
+    <li id="article_popularity"><a href="#">文章人氣</a></li>
   </ul>
 </div>
-</div>
+<div class="web_pop">
+  <div class="row">
+    <!-- Single button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <% if params['month_ago']%>
+        <%= "最近一個月" %>
+      <% elsif params['from_date'] %>
+        <% if params['from_date'] == '7' %>
+          <%= "最近一週" %>
+        <% elsif params['from_date'] == '14' %>
+          <%= "最近兩週" %>
+        <% elsif params['from_date'] == '21' %>
+          <%= "最近三週" %>
+        <% end %>
+      <% else %>
+        <%= "最近一週" %>
+      <% end %>
+         <span id="time_interval" class="caret"></span>
+      </button>
+      <ul id="popularity_interval"class="dropdown-menu" role="menu">
+        <li><a href="?from_date=7">最近一週</a></li>
+        <li><a href="?from_date=14">最近兩週</a></li>
+        <li><a href="?from_date=21">最近三週</a></li>
+        <li><a href="?month_ago=1">最近一個月</a></li>
+      </ul>
+    </div>
+  </div>
 <div class="week_flow">
 </div>
   <h3>
     <span></span>
   </h3>
-
+</div>
 <script>
 var week_flow = []
 var popularities_in_a_week = <%= @popularities_in_a_week.to_json.html_safe %>
@@ -73,4 +80,18 @@ console.log(week_flow[0].date);
     return d.y+14;
   }
  });
+  //nav tab的切換
+  $('ul.nav-tabs li').click(function(){
+    $('.nav-tabs li').removeClass('active');
+    $(this).attr('class','active');
+    if ($(this).attr("id") == 'article_popularity'){
+      $('.web_pop').hide();
+    }
+    else if ($(this).attr("id") == 'website_popularity'){
+      $('.web_pop').show();
+    }
+
+  })
+  //網頁人氣,文章人氣切換
+  $
 </script>
